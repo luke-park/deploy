@@ -10,7 +10,7 @@
 - Execute any SSH command in your JavaScript.
 
 ## Installing
-To install `deploy`, either clone this repository and build from source, or download from our [releases](https://github.com/luke-park/deploy/releases).  Add the containing folder for `deploy` to your `PATH`, and then simply use the command `deploy` in any folder that contains a `deploy.js` file.
+To install `deploy`, either clone this repository and build from source, or download from our [releases](https://github.com/luke-park/deploy/releases).  When download the binary directly, be sure to unblock the executable and included files (Properties -> Check Unblock).  Add the containing folder for `deploy` to your `PATH`, and then simply use the command `deploy` in any folder that contains a `deploy.js` file.
 
 ## Example
 The following is a simple example of a `deploy.js` file that stops a running service, uploads any changed files in a folder, and then restarts the service.  It retrieves the password for the key file from the command line args, so we can run in the prompt like so: `deploy superDuperGoodPassword`.
