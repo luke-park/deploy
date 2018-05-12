@@ -69,7 +69,6 @@ namespace ljp.Deploy.SSH
         {
             _hashList.Update(new Hashpair(p.remotePath, p.localPath));
             _hashListChanged = true;
-            _ctx.Write("Updating entry for " + p.remotePath + " with hash from " + p.localPath);
         }
         public bool matchesHashlist(Filepair p)
         {
@@ -106,7 +105,7 @@ namespace ljp.Deploy.SSH
         // Files.
         public void uploadFile(Filepair p)
         {
-            _ctx.Write("Uploading " + p.localPath + " to " + p.remotePath);
+            _ctx.Write("Uploading " + Path.GetFileName(p.localPath) + " to " + p.remotePath);
             UploadFileWithDirectories(p.localPath, p.remotePath);
         }
         public void uploadIfRequired(Filepair p)
